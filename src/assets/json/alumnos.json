@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Juan",
+        "last_name": "Pérez",
+        "age": 20
+    },
+    {
+        "id": 2,
+        "name": "Martha",
+        "last_name": "Luna",
+        "age": 22
+    },
+    {
+        "id":3,
+        "name": "Elías",
+        "last_name": "Hernández",
+        "age": 21
+    },
+    {
+        "id": 4,
+        "name": "Alicia",
+        "last_name": "Castellanos",
+        "age": 19
+    },
+    {
+        "id": 5,
+        "name": "Nuria",
+        "last_name": "Ávila",
+        "age": 22
+    }
+]
