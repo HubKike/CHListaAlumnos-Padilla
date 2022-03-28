@@ -1,19 +1,22 @@
-<div class="container-fluid">
-  <table class="table table-striped table-success">
+<div class="container">
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">ID</th>
         <th scope="col">Nombre</th>
         <th scope="col">Apellido</th>
         <th scope="col">Edad</th>
+        <th scope="col">Nombre completo</th>
       </tr>
     </thead>
-    <tbody *ngFor="let alumno of listaAlumnos">
-      <tr>
-        <td scope="row">{{alumno.id}}</td>
+    <!-- <tbody *ngFor="let alumno of listaAlumnos" [ngClass]="{'alumno':true, 'bg-info':alumno.age >21}"> -->
+    <tbody *ngFor="let alumno of alumnosMayores" [ngClass]="{'alumno':true, 'bg-info':alumno.age >21}">
+      <tr (click)="userClicked(alumno.name)">
+        <td scope="row" [ngStyle]="{backgroundColor: alumno.favoriteColor}">{{alumno.id}}</td>
         <td scope="row">{{alumno.name}}</td>
         <td scope="row">{{alumno.last_name}}</td>
         <td scope="row">{{alumno.age}}</td>
+        <td>{{alumno.name}} {{alumno.last_name}} - {{alumno.age}} </td>
       </tr>
     </tbody>
   </table>
