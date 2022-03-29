@@ -10,7 +10,7 @@
       </tr>
     </thead>
     <!-- <tbody *ngFor="let alumno of listaAlumnos" [ngClass]="{'alumno':true, 'bg-info':alumno.age >21}"> -->
-    <tbody *ngFor="let alumno of alumnosMayores" [ngClass]="{'bg-primary':alumno.age <=21, 'bg-info':alumno.age ==22}">
+    <tbody *ngFor="let alumno of listaAlumnos" [ngClass]="{'bg-success':alumno.age ==19, 'bg-primary':alumno.age ==21, 'bg-info':alumno.age ==22}">
       <tr (click)="userClicked(alumno.name)">
         <td scope="row" [ngStyle]="{backgroundColor: alumno.favoriteColor}">{{alumno.id}}</td>
         <td scope="row">{{alumno.name}}</td>
@@ -20,4 +20,9 @@
       </tr>
     </tbody>
   </table>
+  <br>
+  <h5>{{fecha}}</h5>
+  <h4>Fecha con formato</h4>
+  <h5>{{fecha | date:'MMMM dd, yyyy'}}</h5>
 </div>
+
